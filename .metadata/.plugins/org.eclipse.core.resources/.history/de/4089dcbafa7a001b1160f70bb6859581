@@ -1,0 +1,117 @@
+package model;
+
+import java.util.Scanner;
+
+public class ContaCorrente extends Conta {
+
+	private double saldo;
+	
+	Scanner sc = new Scanner(System.in);
+
+	
+
+	public void depositar(double valor) {
+		if (this.getContaAtiva == false) {
+			System.out.println("Conta não ativa");
+		} else if (valor > 0) {
+			this.saldo = saldo + valor;
+			System.out.println("Valor depositado com sucesso");
+		} else {
+			System.out.println("Falha na operação");
+		}
+
+	}
+
+	public void sacar(double valor) {
+		if (this.contaAtiva != true) {
+			System.out.println("Conta não ativa");
+			System.out.println("Deseja ativar a conta? \n1 - Sim\n2 - Não");
+			int a = sc.nextInt();
+			if (a == 1) {
+				abrirConta();
+			} else {
+				System.out.println("Impossível realizar saque");
+			}
+		}
+		if (saldo >= valor) {
+			this.saldo = saldo - valor;
+			System.out.println("Opeção realizada com sucesso");
+		}
+	}
+
+	
+	public void sacarTransferir(double valor) {
+		(saldo >= valor) {
+			this.saldo = saldo - valor;
+			
+	}
+	
+	public void depositarTransferir(double valor) {
+		if(valor > 0)
+			this.saldo = saldo + valor;
+		
+	}
+	
+	public void transferir(Conta contaOrigem, Conta contaDestino, double valor) {
+		if (contaOrigem.contaAtiva != true) {
+			System.out.println("Conta não ativa");
+			
+				System.out.println("Deseja ativar a conta? \n1 - Sim\n2 - Não");
+					int opc = sc.nextInt();
+			
+			if (opc == 1) {
+				abrirConta();
+			}
+			if (this.saldo >= valor) {
+				contaOrigem.sacar(valor);
+				contaDestino.depositar(valor);
+				System.out.println("Transferência concluida com sucesso");
+			} else {
+				System.out.println("Falha na operação");
+			}
+		} else {
+			System.out.println("Impossível realizar transferência");
+		}
+		if (contaDestino.contaAtiva != true) {
+			System.out.println("Impossível ralizar transferência" + ",pois a conta de destino está desativada");
+		}
+	}
+
+	public int getNumero() {
+		return numero;
+	}
+
+	public void setNumero(int numero) {
+		this.numero = numero;
+	}
+
+	public int getAgencia() {
+		return agencia;
+	}
+
+	public void setAgencia(int agencia) {
+		this.agencia = agencia;
+	}
+
+	public boolean getContaAtiva() {
+		return contaAtiva;
+	}
+
+	public void setContaAtiva(boolean contaAtiva) {
+		this.contaAtiva = contaAtiva;
+	}
+
+	public double getSaldo() {
+		return saldo;
+	}
+
+	public void setSaldo(double saldo) {
+		this.saldo = saldo;
+	}
+
+	@Override
+	public String toString() {
+		return "Conta numero=" + numero + ", agencia=" + agencia + ", saldo=" + saldo + ", contaAtiva=" + contaAtiva;
+	}*/
+
+}
