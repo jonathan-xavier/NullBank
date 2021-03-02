@@ -1,0 +1,63 @@
+package model;
+
+import java.util.Scanner;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		int n =0;
+		Scanner sc = new Scanner(System.in)
+				;
+		
+		//ContaCorrente p2 = new ContaCorrente("Caio","896321456-98","rua da hora,35","25/05/1999",1010 ,1010, 1000, false);
+		
+		//System.out.println(p2);
+		
+		Pessoa p1 = new Pessoa();
+		p1.setNome("Rafael");
+		p1.setCpf("123");
+		p1.setEndereco("rua xkjdsdj");
+		p1.setDataNascimento("13/04/1988");
+		
+		System.out.println(p1.getNome() + p1.getCpf());
+		
+		ContaCorrente cc1 = new ContaCorrente();
+		cc1.setAgencia(0005);
+		cc1.setNumero(123456-0);
+		cc1.setSaldo(1500);
+		cc1.setPessoa(p1);
+		
+		System.out.println(cc1);
+				
+		
+		
+		do {
+			System.out.println("Menu de cadastro\n");
+			System.out.println("Digite a opção desejada:\n");
+			System.out.println("1 - Cdastro de Cliente");
+			System.out.println("2 - Ativar/Desativar conta");
+			System.out.println("3 - Depositar");
+			System.out.println("4 - sacar");
+			System.out.println("5 - Transferir");
+			System.out.println("6 - Encerrar sessão");
+			
+			 n = sc.nextInt();
+			
+			
+			
+		} while (n == 6);
+		
+		
+		
+		
+		
+
+
+		
+		
+		
+		
+		
+		
+	}
+}

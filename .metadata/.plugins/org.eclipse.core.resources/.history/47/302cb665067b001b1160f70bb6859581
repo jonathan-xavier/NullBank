@@ -1,0 +1,33 @@
+package model;
+
+public class Principal {
+
+	public static void main(String[] args) {
+
+		
+		
+		//ContaCorrente p2 = new ContaCorrente("Caio","896321456-98","rua da hora,35","25/05/1999",1010 ,1010, 1000, false);
+		
+		//System.out.println(p2);
+		
+		
+		ContaCorrente cc1 = new ContaCorrente();
+		cc1.setPessoa("Rafael","123","rua kjkjk");		
+		
+		
+		
+		
+		
+		
+		
+		
+
+
+		
+		
+		
+		
+		
+		
+	}
+}
